@@ -1,0 +1,11 @@
+{
+  "defaultSeverity": "error",
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "no-namespace": false,
+    "no-reference": false,
+    "prettier": true
+  },
+  "jsRules": {},
+  "rulesDirectory": ["tslint-plugin-prettier"]
+}

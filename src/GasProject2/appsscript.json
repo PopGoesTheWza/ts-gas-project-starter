@@ -1,0 +1,7 @@
+{
+  "timeZone": "Etc/GMT",
+  "dependencies": {
+    "libraries": []
+  },
+  "exceptionLogging": "STACKDRIVER"
+}

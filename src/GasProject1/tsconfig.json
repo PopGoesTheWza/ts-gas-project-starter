@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig-gas",
+  "compilerOptions": {
+    "outFile": "../../build/gas/project1/Code.js"
+  },
+  "files": ["index.ts"],
+  "include": ["**/*.ts"],
+
+  "references": [{ "path": "../common-components/lib1", "prepend": true }]
+}

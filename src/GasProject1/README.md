@@ -1,6 +1,6 @@
 # The `GasProject1` folder
 
-A sample project using the  `lib1` reusable component. It is setup to output a single *.js (including `lib1`)
+A sample project using the  `lib1` reusable component. It is setup to output a single *.js (including the `lib1` component)
 
 ## tsconfig.json
 

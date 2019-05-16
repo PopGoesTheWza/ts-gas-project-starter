@@ -2,7 +2,7 @@
 
 A reusable component which can be added to any GAS project.
 
-Code isolation is defined through namespaces. Its exposed (using `export`) parts are available with the `lib1.` property accessor:
+Code isolation is defined through namespaces. Exposed parts (using `export`) are available with the `lib1.` property accessor:
 
 ```ts
 lib1.publicFunction();

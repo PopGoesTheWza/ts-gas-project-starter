@@ -12,8 +12,11 @@
     "typescript"
   ],
   "scripts": {
-    "build-clean": "rimraf build && npm run config-all && npm run build",
-    "build": "tsc --build src",
+    "build-clean": "rimraf build && npm run config-all && npm run build && npm run postbuild",
+    "build": "tsc --build src && npm run postbuild",
+    "build-project1": "tsc --build src/GasProject1",
+    "build-project2": "tsc --build src/GasProject2 && npm run postbuild",
+    "postbuild": "copyfiles -u 2 build/common-components/lib1.js build/gas/GasProject2",
     "format": "prettier --write 'src/**/*.ts' 'src/**/*.json'",
     "lint": "tslint --project src",
     "config-project1": "copyfiles -u 2 src/GasProject1/appsscript.json src/GasProject1/.clasp.json src/GasProject1/.claspignore build/gas/project1",
@@ -21,19 +24,19 @@
     "config-all": "npm run config-project1 && npm run config-project2",
     "push-project1": "cd build/gas/project1 && clasp push",
     "push-project2": "cd build/gas/GasProject2 && clasp push",
-    "push-all": "npm run push-project1 && npm run push-project2"
+    "push-all": "npm run config-all && npm run push-project1 && npm run push-project2"
   },
   "repository": "https://github.com/PopGoesTheWza/ts-gas-project-starter.git",
   "devDependencies": {
     "@google/clasp": "^2.1.0",
-    "@types/google-apps-script": "^0.0.44",
+    "@types/google-apps-script": "^0.0.47",
     "copyfiles": "^2.1.0",
-    "prettier": "^1.17.0",
+    "prettier": "^1.17.1",
     "rimraf": "^2.6.3",
     "tslint": "^5.16.0",
     "tslint-config-airbnb": "^5.11.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.4.4"
+    "typescript": "^3.4.5"
   }
 }

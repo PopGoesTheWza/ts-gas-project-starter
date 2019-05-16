@@ -1,10 +1,11 @@
+*.tsbuildinfo
+
 node_modules/
 .node_modules/
 
 \#*\#
 .\#*
 
+package-lock.json
 yarn.lock
 yarn-error.log
-
-package-lock.json

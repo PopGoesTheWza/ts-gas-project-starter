@@ -1,6 +1,6 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "extends": ["tslint-config-airbnb", "tslint-config-prettier"],
   "rules": {
     "no-namespace": false,
     "no-reference": false,

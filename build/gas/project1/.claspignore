@@ -1,6 +1,0 @@
-**/**
-*.md
-!appsscript.json
-!**/*.js
-**/*.ts
-**/*.tsbuildinfo

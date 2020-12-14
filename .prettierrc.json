@@ -1,16 +1,12 @@
 {
   "arrowParens": "always",
-
+  "bracketSpacing": false,
+  "endOfLine": "lf",
   "printWidth": 120,
+  "quoteProps": "as-needed",
+  "semi": true,
   "singleQuote": true,
   "tabWidth": 2,
-  "trailingComma": "all",
-  "overrides": [
-    {
-      "files": "package.json",
-      "options": {
-        "tabWidth": 2
-      }
-    }
-  ]
+  "trailingComma": "es5",
+  "useTabs": false
 }

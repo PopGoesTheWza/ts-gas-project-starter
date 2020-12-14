@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "ts-gas-project-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sample repository for Typescript based Google Apps Script projects",
   "author": "Guillaume Contesso a.k.a. PopGoesTheWza",
   "license": "MIT",
@@ -9,16 +9,18 @@
     "gas",
     "google-apps-script",
     "ts",
-    "typescript"
+    "typescript",
+    "v8"
   ],
   "scripts": {
     "build-clean": "rimraf build && npm run config-all && npm run build && npm run postbuild",
-    "build": "tsc --build src && npm run postbuild",
+    "build": "tsc --build src",
+    "postbuild": "npm run postbuild-project2",
     "build-project1": "tsc --build src/GasProject1",
-    "build-project2": "tsc --build src/GasProject2 && npm run postbuild",
-    "postbuild": "copyfiles -u 2 build/common-components/lib1.js build/gas/GasProject2",
-    "format": "prettier --write 'src/**/*.ts' 'src/**/*.json'",
-    "lint": "tslint --project src",
+    "build-project2": "tsc --build src/GasProject2",
+    "postbuild-project2": "copyfiles -u 2 build/common-components/lib1.js build/gas/GasProject2",
+    "format": "prettier --write **.{ts,json}",
+    "lint": "xo",
     "config-project1": "copyfiles -u 2 src/GasProject1/appsscript.json build/gas/project1",
     "config-project2": "copyfiles -u 2 src/GasProject2/appsscript.json build/gas/GasProject2",
     "config-all": "npm run config-project1 && npm run config-project2",
@@ -28,14 +30,12 @@
   },
   "repository": "https://github.com/PopGoesTheWza/ts-gas-project-starter.git",
   "devDependencies": {
-    "@types/google-apps-script": "^1.0.5",
-    "copyfiles": "^2.1.1",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.0",
-    "tslint": "^5.20.1",
-    "tslint-config-airbnb": "^5.11.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.0.1",
-    "typescript": "^3.7.2"
+    "@types/google-apps-script": "^1.0.20",
+    "copyfiles": "^2.4.1",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3",
+    "xo": "^0.36.1"
   }
 }

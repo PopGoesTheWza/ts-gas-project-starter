@@ -3,6 +3,13 @@
   "compilerOptions": {
     "outDir": "../../build/gas"
   },
-  "include": ["**/*.ts"],
-  "references": [{ "path": "../common-components/lib1", "prepend": true }]
+  "include": [
+    "**/*.ts"
+  ],
+  "references": [
+    {
+      "path": "../common-components/lib1",
+      "prepend": true
+    }
+  ]
 }

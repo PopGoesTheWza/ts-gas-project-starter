@@ -10,16 +10,12 @@ namespace lib1 {
    * This function is not exposed to outside the namespace.
    * It is visible only within this namespace block (i.e. namespace `lib1` in index.ts does not know about it)
    */
-  function subInnerFunction() {
-    return 'innerFunction';
-  }
+  const subInnerFunction = () => 'innerFunction';
 
   /**
    * This function is avaialble globally as `lib1.subPublicFunction()`
    */
-  export function subPublicFunction() {
-    return `subPublicFunction called ${subInnerFunction()}`;
-  }
+  export const subPublicFunction = () => `subPublicFunction called ${subInnerFunction()}`;
 }
 
 /** END sub.ts */

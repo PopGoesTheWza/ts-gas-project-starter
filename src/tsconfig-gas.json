@@ -1,42 +1,56 @@
 {
   "compilerOptions": {
     "composite": true,
-    "rootDir": ".",
+    "incremental": true,
 
-    "lib": ["es2017"],
-    "module": "none",
-    // "noLib": true,
-    "target": "es3",
-    "types": ["google-apps-script"],
-
+    // Enforce strict coding style
     "strict": true,
-    // "alwaysStrict": true,
-    // "noImplicitAny": true,
-    // "noImplicitReturns": true,
-    // "strictBindCallApply": true,
-    // "strictNullChecks": true,
-    // "strictFunctionTypes": true,
-    // "strictPropertyInitialization": true,
-
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
-    "noEmitOnError": true,
-    "noErrorTruncation": true,
+    "alwaysStrict": true,
+    // "allowUnreachableCode": false,
+    // "allowUnusedLabels": false,
+    // "downlevelIteration": false,
+    "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    // "preserveConstEnums": true,
-    // "removeComments": true,
-    // "skipLibCheck": true,
+    "strictBindCallApply": true,
     "strictNullChecks": true,
-    // "suppressExcessPropertyErrors": true,
-    // "suppressImplicitAnyIndexErrors": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    // "suppressExcessPropertyErrors": false,
+    // "suppressImplicitAnyIndexErrors": false,
 
-    // "declaration": true,
-    // "declarationMap": true,
+    // Enable latest Javascriptt syntax and target V8 engine
+    "experimentalDecorators": true,
+    "lib": ["ESNext"],
+    "target": "ES2018",
+
+    // Limit use of `export` statements
+    "module": "None",
+    "moduleResolution": "node",
+    // "allowSyntheticDefaultImports": false,
+    // "esModuleInterop": false,
+    // "importHelpers": false,
+
+    // Define files produced by the compiler
     "newLine": "lf",
-    "pretty": true
-    // "sourceMap": true,
+    "noEmitOnError": true,
+    // "declaration": false,
+    // "declarationMap": false,
+    // "noResolve": false,
+    // "preserveConstEnums": false,
+    // "removeComments": false,
+    "rootDir": ".",
+    // "sourceMap": false,
+    // "stripInternal": false,
+
+    // Make Google Apps Script type definitions ambient
+    // "noLib": false,
+    // "skipLibCheck": false,
+    "types": ["google-apps-script"],
+    // "typeRoots": ["src/types", "node_modules/@types"],
   }
 }

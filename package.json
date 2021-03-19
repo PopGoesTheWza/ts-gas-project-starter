@@ -20,7 +20,7 @@
     "build-project2": "tsc --build src/GasProject2",
     "postbuild-project2": "copyfiles -u 2 build/common-components/lib1.js build/gas/GasProject2",
     "format": "prettier --write **.{ts,json}",
-    "lint": "xo",
+    "lint": "xo --quiet",
     "config-project1": "copyfiles -u 2 src/GasProject1/appsscript.json build/gas/project1",
     "config-project2": "copyfiles -u 2 src/GasProject2/appsscript.json build/gas/GasProject2",
     "config-all": "npm run config-project1 && npm run config-project2",
@@ -30,12 +30,12 @@
   },
   "repository": "https://github.com/PopGoesTheWza/ts-gas-project-starter.git",
   "devDependencies": {
-    "@types/google-apps-script": "^1.0.20",
+    "@types/google-apps-script": "^1.0.28",
     "copyfiles": "^2.4.1",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.1.3",
-    "xo": "^0.36.1"
+    "typescript": "^4.2.3",
+    "xo": "^0.38.2"
   }
 }

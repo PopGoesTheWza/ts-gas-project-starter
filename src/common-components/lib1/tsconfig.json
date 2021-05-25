@@ -1,7 +1,7 @@
 {
   "extends": "../../tsconfig-gas",
   "compilerOptions": {
-    "outFile": "../../../build/common-components/lib1/index.js"
+    "outFile": "../../../build/common-components/lib1/lib1.js"
   },
 
   "references": [],

@@ -18,7 +18,7 @@
     "postbuild": "npm run postbuild-project2",
     "build-project1": "tsc --build src/GasProject1",
     "build-project2": "tsc --build src/GasProject2",
-    "postbuild-project2": "copyfiles -u 2 build/common-components/lib1.js build/gas/GasProject2",
+    "postbuild-project2": "copyfiles -u 3 build/common-components/lib1/lib1.js build/gas/GasProject2",
     "format": "prettier --write **.{ts,json}",
     "lint": "xo --quiet",
     "config-project1": "copyfiles -u 2 src/GasProject1/appsscript.json build/gas/project1",

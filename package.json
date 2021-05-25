@@ -30,12 +30,37 @@
   },
   "repository": "https://github.com/PopGoesTheWza/ts-gas-project-starter.git",
   "devDependencies": {
-    "@types/google-apps-script": "^1.0.28",
+    "@types/google-apps-script": "^1.0.33",
     "copyfiles": "^2.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "rimraf": "^3.0.2",
-    "typescript": "^4.2.3",
-    "xo": "^0.38.2"
+    "typescript": "^4.2.4",
+    "xo": "^0.39.1"
+  },
+  "xo": {
+    "ignores": [
+      "build",
+      "**.js"
+    ],
+    "space": 2,
+    "rules": {
+      "capitalized-comments": "warn",
+      "no-inner-declarations": "warn",
+      "no-undef": "off",
+      "@typescript-eslint/no-unsafe-argument": "warn",
+      "@typescript-eslint/no-unused-vars": "off",
+      "@typescript-eslint/restrict-template-expressions": [
+        "warn",
+        {
+          "allowNumber": true,
+          "allowBoolean": false,
+          "allowAny": false,
+          "allowNullish": false
+        }
+      ],
+      "@typescript-eslint/triple-slash-reference": "off",
+      "unicorn/filename-case": "off"
+    },
+    "prettier": true
   }
 }
